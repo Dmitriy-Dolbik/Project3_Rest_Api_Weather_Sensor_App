@@ -2,9 +2,7 @@ package com.dolbik.Project3.controllers;
 
 import com.dolbik.Project3.dto.SensorDTO;
 import com.dolbik.Project3.models.Sensor;
-import com.dolbik.Project3.services.MeasurementsService;
 import com.dolbik.Project3.services.SensorsService;
-import com.dolbik.Project3.util.ErrorsUtil;
 import com.dolbik.Project3.util.MeasurementErrorResponse;
 import com.dolbik.Project3.util.MeasurementException;
 import com.dolbik.Project3.util.SensorValidator;
@@ -13,12 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
-import static com.dolbik.Project3.util.ErrorsUtil.returnErrorsToClient;
 
 import javax.validation.Valid;
-import java.util.List;
+
+import static com.dolbik.Project3.util.ErrorsUtil.returnErrorsToClient;
 
 @RestController
 @RequestMapping("/sensors")

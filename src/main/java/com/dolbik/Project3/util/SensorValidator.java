@@ -1,6 +1,5 @@
 package com.dolbik.Project3.util;
 
-import com.dolbik.Project3.dto.SensorDTO;
 import com.dolbik.Project3.models.Sensor;
 import com.dolbik.Project3.services.SensorsService;
 import org.springframework.beans.factory.annotation.Autowired;

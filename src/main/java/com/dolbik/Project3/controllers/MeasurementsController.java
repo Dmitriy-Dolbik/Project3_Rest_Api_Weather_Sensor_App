@@ -4,19 +4,18 @@ import com.dolbik.Project3.dto.MeasurementDTO;
 import com.dolbik.Project3.models.Measurement;
 import com.dolbik.Project3.models.MeasurementsResponse;
 import com.dolbik.Project3.services.MeasurementsService;
-import com.dolbik.Project3.util.*;
+import com.dolbik.Project3.util.MeasurementErrorResponse;
+import com.dolbik.Project3.util.MeasurementException;
+import com.dolbik.Project3.util.MeasurementValidator;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.jmx.export.assembler.MethodNameBasedMBeanInfoAssembler;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.dolbik.Project3.util.ErrorsUtil.returnErrorsToClient;
